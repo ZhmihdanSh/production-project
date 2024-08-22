@@ -1,0 +1,32 @@
+.Button {
+    margin: 0;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.clear,
+.clearInverted {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.outline,
+.outlineInverted {
+    background: none;
+    border: 2px solid var(--primary-color);
+    padding: 10px 15px;
+}
+
+.clearInverted,
+.outlineInverted {
+    color: var(--inverted-primary-color);
+}
+
+.outlineInverted {
+    border: 2px solid var(--inverted-primary-color);
+}
+
+.Button:hover {
+    opacity: var(--ux-opacity);
+}

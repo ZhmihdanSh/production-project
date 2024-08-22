@@ -1,0 +1,41 @@
+name: linting, testing, building
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build-ci-pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 17.x ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Starting Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install modules
+        if: always()
+        run: npm install
+      - name: Build project in production mode
+        if: always()
+        run: npm run build:prod
+      - name: Install modules
+        if: always()
+        run: npm install
+      - name: Typescript linting with eslint
+        if: always()
+        run: npm run lint:ts
+      - name: Scss linting with stylelint
+        if: always()
+        run: npm run lint:scss
+      - name: Unit and Integration testing
+        if: always()
+        run: npm run test:unit
+      - name: Build storybook
+        if: always()
+        run: npm run build:storybook
+#      - name: Screenshot testing
+#        run: npm run test:ui:ci
