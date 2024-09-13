@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
     env: {
         browser: true,
@@ -93,7 +94,9 @@ module.exports = {
             }
         ],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
-        indent: ['error', 4]
+        indent: ['error', 4],
+        'import/named': 'off',
+        'react/no-deprecated': 'off'
     },
     globals: {
         __IS_DEV__: true

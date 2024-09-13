@@ -10,7 +10,7 @@ export default {
     argTypes: {}
 } as ComponentMeta<typeof ErrorPage>;
 
-const Template: ComponentStory<typeof ErrorPage> = (args) => <ErrorPage />;
+const Template: ComponentStory<typeof ErrorPage> = () => <ErrorPage />;
 
 export const ErrorPageLight = Template.bind({});
 ErrorPageLight.args = {};

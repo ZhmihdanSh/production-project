@@ -22,9 +22,6 @@ jobs:
       - name: Build project in production mode
         if: always()
         run: npm run build:prod
-      - name: Install modules
-        if: always()
-        run: npm install
       - name: Typescript linting with eslint
         if: always()
         run: npm run lint:ts
