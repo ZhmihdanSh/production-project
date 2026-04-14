@@ -1,0 +1,25 @@
+@use 'reset';
+@use 'variables/global';
+@use 'themes/dark';
+@use 'themes/light';
+
+.app {
+    font: var(--font-m);
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.page-content {
+    display: flex;
+    height: calc(100vh - var(--navbar-height));
+}
+
+.page {
+    flex-grow: 1;
+    height: 100%;
+    padding: 15px 45px;
+}
+
+.page > * {
+    height: 100%;
+}

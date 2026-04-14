@@ -1,0 +1,29 @@
+.Button {
+    background: transparent;
+}
+
+.clear, .clearInverted {
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+.clear, .outline {
+    color: var(--primary-color);
+}
+
+.clearInverted, .outlineInverted {
+    color: var(--inverted-primary-color);
+}
+
+.outline, .outlineInverted {
+    padding: 10px;
+}
+
+.outline {
+    border: 1px solid var(--primary-color)
+}
+
+.outlineInverted {
+    border: 1px solid var(--inverted-primary-color);
+}

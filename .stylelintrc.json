@@ -1,0 +1,35 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-standard-scss",
+        "stylelint-config-recess-order"
+    ],
+    "plugins": [
+        "stylelint-order",
+        "@stylistic/stylelint-plugin"
+    ],
+    "rules": {
+        "alpha-value-notation": "number",
+        "color-function-notation": "modern",
+        "no-descending-specificity": null,
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": true,
+        "selector-pseudo-class-no-unknown": [
+            true,
+            { "ignorePseudoClasses": ["global", "local"] }
+        ],
+        "selector-class-pattern": [
+            "^[A-Z][a-zA-Z0-9]+|[a-z][a-zA-Z0-9-]+$",
+            { "message": "Ожидался PascalCase (для компонентов) или kebab-case" }
+        ],
+        "order/order": ["custom-properties", "declarations"],
+        "@stylistic/indentation": 4,
+        "@stylistic/string-quotes": "single",
+        "@stylistic/number-leading-zero": "always",
+        "@stylistic/declaration-colon-space-after": "always",
+        "@stylistic/declaration-colon-space-before": "never",
+        "@stylistic/max-empty-lines": 1,
+        "@stylistic/block-opening-brace-space-before": "always",
+        "@stylistic/color-hex-case": "lower"
+    }
+}
