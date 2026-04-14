@@ -13,18 +13,18 @@ export const Sidebar = memo((props: SidebarProps) => {
         className,
     } = props;
 
-    const [collapsed, setCollapsed] = useState(false);
+    // TODO: добавить setCollapsed
+    const [collapsed] = useState(false);
 
-    const toggleSidebar = () => {
-        setCollapsed(prev => !prev);
-    };
+    // const toggleSidebar = () => {
+    //     setCollapsed(prev => !prev);
+    // };
 
     return (
         <div
             data-testid="sidebar"
             className={classNames(classes.Sidebar, { [classes.collapsed]: collapsed }, [className])}
         >
-            <button onClick={toggleSidebar} data-testid="toggle-button">toggle sidebar</button>
             <div className={classes.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher />
