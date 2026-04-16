@@ -18,3 +18,18 @@ export const PrimaryDark: Story = {
         theme: Theme.DARK,
     },
 };
+
+export const Short: Story = {
+    args: {
+        short: true,
+    },
+};
+
+export const ShortDark: Story = {
+    args: {
+        short: true,
+    },
+    parameters: {
+        theme: Theme.DARK,
+    },
+};

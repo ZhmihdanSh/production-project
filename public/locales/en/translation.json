@@ -1,5 +1,8 @@
 {
     "Язык": "English",
+    "Короткий язык": "EN",
     "Ошибка": "An unexpected error has occurred!",
-    "Перезагрузить страницу": "Reload Page"
+    "Перезагрузить страницу": "Reload Page",
+    "Главная": "Main Page",
+    "О сайте": "About us"
 }
